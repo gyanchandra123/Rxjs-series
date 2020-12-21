@@ -1,0 +1,9 @@
+.border {
+    border-left: 5px solid red !important;
+    height: 80vh;
+    margin-top: 10px;
+    background-color: rebeccapurple;
+    box-sizing: border-box;
+    overflow: auto;
+     
+}

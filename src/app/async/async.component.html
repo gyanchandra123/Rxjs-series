@@ -1,0 +1,49 @@
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+<p [ngStyle]="{'color':'red'}">async works!</p>
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+
+<div class="row">
+    <div class="col-sm-10">
+        <div class="row">
+            <div class="col-sm-6">
+                <div>
+                    <label for="exampleInputEmail1">video feed</label>
+                    <input type="text" class="form-control" id="exampleInputEmail31" aria-describedby="emailHelp"
+                        #inputValue>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+            </div>
+
+            <div class="col-sm-6 mtop">
+                <button class="btn btn-primary" type="button" (click)="addVideo(inputValue)">
+                    submit the new video
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<hr>
+
+
+<div class="row">
+
+    <div class="col-sm-4">
+        <ul>
+            <li *ngIf='lastAsyncdata'>{{lastAsyncdata}}</li>
+        </ul>
+    </div>
+
+    <!-- 2nd column video-feed -->
+    <div class="col-sm-4"> 
+         <button class="btn btn-primary " type="button" (click)="subscribeVideo2()">
+            complete subscription
+        </button>
+    </div>
+
+
+</div>
+
+<br><br><br><br><br>

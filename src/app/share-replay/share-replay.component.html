@@ -1,0 +1,80 @@
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+<p [ngStyle]="{'color':'red'}">share-replay works</p>
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+
+<div class="row">
+    <div class="col-sm-4">
+        <button class="btn btn-primary" (click)='loadingCompleteServerData()'>load complete server data</button>
+    </div>
+
+    <div class="col-sm-4">
+        <button class="btn btn-primary" (click)='loadingActiveServerData()'>load Active server data</button>
+    </div>
+
+    <div class="col-sm-4">
+        <button class="btn btn-primary" (click)='loadingInActiveServerData()'>load InActive server data</button>
+    </div>
+</div>
+
+see console
+
+<div>
+
+    <div class="row">
+        <div class="col-sm-4 first mt-3">
+            <h5>All Employee :</h5>
+            <hr>
+            <ul>
+                <li *ngFor='let each of AllData|async '>
+                    empId : <span>{{each.id}}</span><br>
+                    empName : <span>{{each.name}}</span><br>
+                    empGender : <span>{{each.gender}}</span><br>
+                    empEmail <span>{{each.email}}</span><br>
+                    empNUmber : <span>{{each.phoneNumber}}</span><br>
+                    empContact : <span>{{each.contactPreference}}</span><br>
+                    empActive : <span>{{each.isActive}}</span>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="col-sm-4 first mt-3">
+            <h5>Active Employee :</h5>
+            <hr>
+            <ul>
+                <li *ngFor='let each of activeEmployee|async '>
+                    empId : <span>{{each.id}}</span><br>
+                    empName : <span>{{each.name}}</span><br>
+                    empGender : <span>{{each.gender}}</span><br>
+                    empEmail <span>{{each.email}}</span><br>
+                    empNUmber : <span>{{each.phoneNumber}}</span><br>
+                    empContact : <span>{{each.contactPreference}}</span><br>
+                    empActive : <span>{{each.isActive}}</span>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="col-sm-4first mt-3">
+            <h5>InActive Employee :</h5>
+            <hr>
+            <ul>
+                <li *ngFor='let each of inActiveEMployee|async '>
+                    empId : <span>{{each.id}}</span><br>
+                    empName : <span>{{each.name}}</span><br>
+                    empGender : <span>{{each.gender}}</span><br>
+                    empEmail <span>{{each.email}}</span><br>
+                    empNUmber : <span>{{each.phoneNumber}}</span><br>
+                    empContact : <span>{{each.contactPreference}}</span><br>
+                    empActive : <span>{{each.isActive}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<hr><br><br><br><br><br><br><br><br><br><br><br><br>

@@ -1,0 +1,103 @@
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+<p [ngStyle]="{'color':'red'}">replay-subject works!</p>
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+
+
+
+<div class="row">
+    <div class="col-sm-10">
+        <div class="row">
+            <div class="col-sm-6">
+                <div>
+                    <label for="exampleInputEmail1">video feed</label>
+
+                    <input type="text" class="form-control" id="exampleInputEmail331" aria-describedby="emailHelp"
+                        #inputValue>
+
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.
+                    </small>
+                </div>
+            </div>
+
+            <div class="col-sm-6 mtop">
+                <button class="btn btn-primary" type="button" (click)="addVideo(inputValue)">
+                    submit the new video
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<hr>
+
+
+<div class="row">
+    <div class="col-sm-4">
+        <ul>
+            <li *ngFor='let each of videoAgroup1'>{{each}}</li>
+        </ul>
+    </div>
+
+    <!-- 2nd column video-feed -->
+    <div class="col-sm-4">
+        2nd column
+        <ul>
+            <li *ngFor='let each of videoAgroup2'>{{each}}</li>
+        </ul>
+
+        <button class="btn " type="button" [ngClass]='subscribeToggle2?"btn-danger":"btn-primary"'
+            (click)="subscribeVideo2()">
+            {{subscribeToggle2?"unsubscribe videoFeed":'subscibe to videoFeed'}}
+        </button>
+
+    </div>
+
+    <!-- 3rd column video-feed -->
+    <div class="col-sm-4">
+        3rd column
+        <ul>
+            <li *ngFor='let each of videoAgroup3'>{{each}}</li>
+        </ul>
+
+        <button class="btn " type="button" [ngClass]='subscribeToggle3?"btn-danger":"btn-primary"'
+            (click)="subscribeVideo3()">
+            {{subscribeToggle3?"unsubscribe videoFeed":'subscibe to videoFeed'}}
+        </button>
+
+    </div>
+</div>
+
+<!-- ADDING THE ASYNC SELECTOR HERE : -->
+<app-async></app-async>
+
+<!-- ADDING THE concat SELECTOR HERE : -->
+<app-concat></app-concat>
+
+<!-- ADDING THE merge SELECTOR HERE : -->
+<app-merge></app-merge>
+
+<!-- ADDING THE merge-map SELECTOR HERE : -->
+<app-merge-map></app-merge-map>
+
+<!-- ADDING THE  concat-map  SELECTOR HERE : -->
+<app-concat-map></app-concat-map>
+
+<!-- ADDING THE  concat-map for mobile notifications SELECTOR HERE : -->
+<app-concat-map-mobile-notification></app-concat-map-mobile-notification>
+
+<!-- ADDING THE  switchMap -map  SELECTOR HERE : -->
+<app-switch-map></app-switch-map>
+
+<!-- ADDING THE  switch-map for search functionality SELECTOR HERE : -->
+<app-switch-map-search-functionality></app-switch-map-search-functionality>
+
+<!-- ADDING THE  exhaust-map  SELECTOR HERE : -->
+<app-exhaust-map></app-exhaust-map>
+
+<!-- ADDING THE  exhaust-map  SELECTOR HERE : -->
+<app-share-replay></app-share-replay>
+
+<!-- ADDING THE  combineLatest  SELECTOR HERE : -->
+<app-combine-latest></app-combine-latest>

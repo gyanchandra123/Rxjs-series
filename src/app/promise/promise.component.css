@@ -1,0 +1,21 @@
+.border {
+    position: relative !important;
+}
+.border:target {
+    position: absolute;
+    top: 154px;
+    background-color: deeppink !important;
+    padding: 9px;
+    width: 129px;
+    left: 49px;
+}
+
+.fetched {
+    color: blue;
+    font-weight: 600;
+}
+
+.fetchingError {
+    color: red;
+    font-weight: 500;
+}

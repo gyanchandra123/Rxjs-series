@@ -1,0 +1,60 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Jamy",
+      "gender": "Female",
+      "email": "Jamy@gmail.com",
+      "phoneNumber": 66799999996,
+      "contactPreference": "email",
+      "dateOfBirth": "08/03/1919",
+      "department": "2",
+      "isActive": true,
+      "photoPath": "assets/images/jamy.jpg",
+      "password": "jamy123",
+      "confirmPassword":"jamy123"
+    },
+    {
+      "id": 2,
+      "name": "Josh",
+      "gender": "Female",
+      "email": "josh@google.com",
+      "phoneNumber": 66799999996,
+      "contactPreference": "phoneNumber",
+      "dateOfBirth": "08/01/1912",
+      "department": "4",
+      "isActive": true,
+      "photoPath": "assets/images/josh.png",
+      "password": "Josh123",
+      "confirmPassword":"Josh123"
+    },
+    {
+      "id": 3,
+      "name": "Emiley",
+      "gender": "Female",
+      "email": "emiley@gmail.com",
+      "phoneNumber": 22799999996,
+      "contactPreference": "phoneNumber",
+      "dateOfBirth": "03/01/1912",
+      "department": "3",
+      "isActive": false,
+      "photoPath": "assets/images/emiley.jpg",
+      "password": "Emiley123",
+      "confirmPassword":"Emiley123"
+    },
+    {
+      "id": 4,
+      "name": "Matin",
+      "gender": "Male",
+      "email": "matin@DvConnect.com",
+      "phoneNumber": 22799999996,
+      "contactPreference": "phoneNumber",
+      "dateOfBirth": "03/01/1912",
+      "department": "4",
+      "isActive": true,
+      "photoPath": "assets/images/matin.png",
+      "password": "Matin123",
+      "confirmPassword":"Matin123"
+    }
+  ]
+}

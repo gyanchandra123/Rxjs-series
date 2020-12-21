@@ -1,0 +1,74 @@
+<p>switch-map-search-functionality works!</p>
+
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+<p [ngStyle]="{'color':'red'}">switch-map-search-functionality works!</p>
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+
+
+
+<h3>to see the switchMap functionality in search </h3>
+
+<span><b>Search the videos</b></span>
+
+<!-- input serach box: -->
+<form #SearchForm='ngForm'>  
+
+    <div class="search__Input--parent mt-3">
+        <input type="text" class="form-control  " name='searchInput' placeholder='enter the search term'
+            autocomplete="off" ngModel   >
+    </div>
+
+</form>
+
+
+<hr>
+<div class="result" *ngIf='searchResult'>
+
+    <div class="row">
+
+        <div class="col-sm-10">
+            <h5>Search Results</h5>
+        </div>
+
+        <div class="col-sm-2">
+            <span class="pull-right text-muted">total No of results: {{resultCount}}</span>
+        </div>
+
+    </div>
+
+    <table class="table">
+        <thead>
+
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">thumbnail</th>
+                <th scope="col">title & description</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr *ngFor='let eachObject of searchResult; let i = index'>
+
+                <th scope="row">{{i+1}}</th>
+
+                <td>
+                    <img [src]="eachObject.thumb " width="120" alt="">
+                </td>
+
+                <td>
+                    <strong>
+                        {{eachObject.title}}
+                        Rxjs #1 | Rxjs Introduction | Observables |
+                    </strong>
+                    <p>
+                        {{eachObject.description}}
+                    </p>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

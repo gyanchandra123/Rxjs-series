@@ -1,0 +1,247 @@
+<div class="parent row" #parent>
+
+    <!-- RETRY -->
+    <!-- <div class="col-sm-6">
+
+        <div class="row">
+            <div class="btn-group col-sm-12">
+
+                <button class="btn btn-primary border" #parentElemt (click)="retryOperator()" type="button">
+                    <span *ngIf="fetching" class=" spinner-grow text-warning spinner-border spinner-border-sm"
+                        role="status" aria-hidden="true">
+                    </span>
+                    {{fetching?'fetching data...':'retry operator'}}
+                </button>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <pre [ngStyle]="{'color':'red', 'position':'fixed'}">
+
+            <table class="table   table-striped" *ngIf ='endPointData!=null' >
+               <tr>
+                   <th>email :</th>
+                   <td>{{endPointData.email}}</td>
+               </tr>
+               <tr>
+                   <th>gender :</th>
+                   <td>{{endPointData.gender}}</td>
+               </tr>
+               <tr>
+                   <th>id :</th>
+                   <td>{{endPointData.id}}</td>
+               </tr>
+               <tr>
+                   <th>name :</th>
+                   <td>{{endPointData.name}}</td>
+               </tr>
+               <tr>
+                   <th>phone :</th>
+                   <td>{{endPointData.phone}}</td>
+               </tr>
+               <tr>
+                   <th>skill :</th>
+                   <td>{{endPointData.skill}}</td>
+               </tr>
+                
+            </table>
+       
+        
+          </pre>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            Status : <span [ngClass]="statusStyle">{{status}}</span>
+        </div>
+    </div> -->
+
+
+    <!-- RETRYWHEN -->
+    <div class="col-sm-6">
+
+        <div class="row">
+            <div class="btn-group col-sm-12">
+                <button class="btn btn-primary border" #parentElemt (click)="retryWhenOperator()" type="button">
+
+                    <span *ngIf="fetching" class="  spinner-border spinner-border-sm" role="status" aria-hidden="true">
+                    </span>
+
+                    {{fetching?'fetching data...':'retryWhen operator'}}
+
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-10">
+
+                Status : <span [ngClass]="statusStyle"><b>{{status}}</b></span>
+
+                <span class="spinner-grow spinner-grow-sm text-warning" role="status" aria-hidden="true"
+                    *ngIf="fetching ===true && status!=='no Data'">
+                </span>
+            </div>
+
+            <div class="col-sm-12">
+                <pre [ngStyle]="{'color':'red', 'position':'sticky'}">
+
+            <table class="table   table-striped" *ngIf ='endPointData!=null' >
+               <tr>
+                   <th>email :</th>
+                   <td>{{endPointData.email}}</td>
+               </tr>
+               <tr>
+                   <th>gender :</th>
+                   <td>{{endPointData.gender}}</td>
+               </tr>
+               <tr>
+                   <th>id :</th>
+                   <td>{{endPointData.id}}</td>
+               </tr>
+               <tr>
+                   <th>name :</th>
+                   <td>{{endPointData.name}}</td>
+               </tr>
+               <tr>
+                   <th>phone :</th>
+                   <td>{{endPointData.phone}}</td>
+               </tr>
+               <tr>
+                   <th>skill :</th>
+                   <td>{{endPointData.skill}}</td>
+               </tr>
+                
+            </table>          
+          </pre>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="col-sm-6">
+
+        <div class="pl-5">
+            <p>promise works!</p>
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='collectinData()'>collect data using
+                    interval</button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='OfObservableData()'>emit data with of
+                    observable</button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='fromObservableArrayData()'>
+                    convert array to observable</button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='fromObservablePromiseData()'>
+                    convert promise to observable</button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='fromObservableStringData()'>
+                    convert string to observable</button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='ofObservableStringDataToArrayObservable()'>
+                    using toArray() pipeable operator
+                </button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='emitCustomStringObservable()'>
+                    creating custom string observable</button>
+            </div>
+
+            <h3 *ngIf='observableCompletionCheck'>checking complettion of custom observable :
+                {{observableCompletionCheck}}
+            </h3>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='emitCustomIntervalObservable()'>
+                    creating custom interval observable</button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='emitCustomIntervalObservableOfArrayData()'>
+                    creating custom interval observable emiiting array data</button>
+            </div>
+
+            <P *ngIf='intervalArrayData'>interval data :{{intervalArrayData}}
+
+                <span [ngClass]="(nameStatus==='completed')? 'badge-success':'badge-primary'" style="margin-left:50px">
+                    {{(nameStatus==='completed')?'success':'running. . .'}}
+                </span>
+            </P>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='mapTransform1()'>
+                    using map for transformation1</button>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='mapTransform2()'>
+                    using map for transformation2</button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='transformDataWithPluck()'>
+                    using pluck for transformation2</button>
+            </div>
+            <div *ngIf='pluckData'>
+                <ul>
+                    <li *ngFor="let each of pluckData">{{each}}</li>
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='filterObservableDataBylength()'>
+                    filtering observable data </button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='tapOperatorOnArray()'>
+                    Tap observable data </button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='takeOperatorOnArray()'>
+                    take Operator OnArray </button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='takeLastOperatorOnArray()'>
+                    takeLast Operator OnArray </button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='takeUntilOperatorOnArray()'>
+                    takeUntil Operator OnArray</button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary border" #parentElemt (click)='skipOperatorOnArray()'>
+                    skip Operator OnArray</button>
+            </div>
+
+
+            <p *ngIf='modifiedByTap'>tap modified component data : {{modifiedByTap}}</p>
+        </div>
+    </div>
+
+
+</div>

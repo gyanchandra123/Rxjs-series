@@ -1,0 +1,49 @@
+<p>exhaust-map works!</p>
+
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+<p [ngStyle]="{'color':'red'}">exhaust-map works!</p>
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+
+<!-- working with normal JS click event: -->
+
+<button class="btn btn-primary" (click)="btnClick()">normal save click</button>
+see console
+
+<div class="searchRequestCount">
+    <span>request send due to normal save click ::{{noOfRequestSend1}}</span>
+</div>
+
+<hr><br><br><br>
+
+<div>
+    <button class="btn btn-warning" (click)='clearRequestValue()'>clearPreviousResult</button>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+
+        <!-- concat map implementation: -->
+
+        <button class="btn btn-primary" #concatBtn>optimised save click with concatMap</button>
+
+
+        <div class="searchRequestCountC">
+            <span>request send due to concatMap save click :: {{clickDataFromServerC}}</span>
+        </div>
+
+    </div>
+
+
+    <div class="col-sm-6">
+        <!-- exhaust map implementation: -->
+
+        <button class="btn btn-primary" #exhaustBtn>optimised save click with exhaustMap</button>
+
+
+        <div class="searchRequestCountE">
+            <span>request send due to exhaustMap save click ::{{clickDataFromServerE}} </span>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>

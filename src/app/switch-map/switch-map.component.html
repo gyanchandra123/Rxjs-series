@@ -1,0 +1,33 @@
+<p>switch-map works!</p>
+
+
+
+
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+<p [ngStyle]="{'color':'red'}">switch-map works!</p>
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+
+
+
+<h3> mobile phone notification :</h3> 
+<button (click)='clearData(notifications)' class="btn btn-warning">clear previous data</button>
+
+
+<div class="btn-group">
+    <button class="btn btn-primary" (click)="showNotificationM()">Show notifications(using mergeMap)</button>
+    &nbsp;&nbsp;
+    <span [ngStyle]="{'display':'inline-block','border-right':'2px solid red','height':'100px'}"> </span> &nbsp;&nbsp;
+    <button class="btn btn-primary" (click)="showNotificationC()">Show notifications(using concatMap)</button>
+    &nbsp;&nbsp;
+    <span [ngStyle]="{'display':'inline-block','border-right':'2px solid red','height':'100px'}"> </span> &nbsp;&nbsp;
+
+    <button class="btn btn-primary" (click)="showNotificationS()">Show notifications(using switchMap)</button>
+</div>
+
+see console
+
+<div class="messages" #notifications>
+    <span></span>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

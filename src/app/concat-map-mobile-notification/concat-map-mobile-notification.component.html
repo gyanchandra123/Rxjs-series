@@ -1,0 +1,24 @@
+<p>concat-map-mobile-notification works!</p>
+
+
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+<p [ngStyle]="{'color':'red'}">concat-map-mobile-notification works!</p>
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+
+
+
+<h3>concat mobile phone notification :</h3>
+<div class="  btn-group">
+    <button class="btn btn-primary" (click)="showNotificationM()" >Show notifications(using mergeMap)</button>
+    &nbsp;&nbsp;
+    <span [ngStyle]="{'display':'inline-block','border-right':'2px solid red','height':'100px'}"> </span> &nbsp;&nbsp;
+     <button class="btn btn-primary" (click)="showNotificationC()">Show notifications(using concatMap)</button>
+
+</div>
+see console
+ 
+<div class="messages" #notifications>
+     <span></span>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

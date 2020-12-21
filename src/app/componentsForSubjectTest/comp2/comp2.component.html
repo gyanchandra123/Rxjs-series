@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header">
+        Featured
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Component 2</h5>
+        <div class="form-group">
+            <label for="exampleInputEmail1">{{userName?userName:'Default value'}}</label>
+            <input type="text" class="form-control" id="exampleInputEmail2" #userNameTempRef
+                aria-describedby="emailHelp">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="passedCommonData()">change Subject Data</button>
+    </div>
+</div>

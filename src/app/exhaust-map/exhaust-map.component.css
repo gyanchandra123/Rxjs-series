@@ -1,0 +1,9 @@
+.searchRequestCount {
+    padding: 4px;
+    background-color: crimson;
+    border: 1px solid black;
+}
+
+hr {
+    border: 2px solid red;
+}

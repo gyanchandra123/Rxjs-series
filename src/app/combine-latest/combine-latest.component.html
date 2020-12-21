@@ -1,0 +1,51 @@
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+<p [ngStyle]="{'color':'red'}">combine-latest works!</p>
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+
+
+<div class="row">
+    <div class="col-sm-3">
+        <select name="names" class="form-control" #names>
+            <option value="Raj">Raj</option>
+            <option value="Aman">Aman</option>
+            <option value="Roy">Roy</option>
+            <option value="troy">troy</option>
+
+        </select>
+    </div>
+    <div class="col-sm-9">
+        combine-latest:
+        {{combineLatestObservable}}
+    </div>
+</div>
+
+<hr>
+<div class="row">
+    <div class="col-sm-3">
+        <select name="names" class="form-control" #color>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="orange">orange</option>
+            <option value="yellow">yellow</option>
+        </select>
+    </div>
+     
+</div>
+
+
+ 
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+<p [ngStyle]="{'color':'red'}">wuth-latest-from works!</p>
+<hr [ngStyle]="{'border':'1px solid yellow'}">
+
+
+ 
+    <div class="col-sm-9">
+        with latest form:
+        {{withLatestObservable}}
+    </div>
+ 
+
+ 
+
+<br><br><br><br><br><br><br><br>

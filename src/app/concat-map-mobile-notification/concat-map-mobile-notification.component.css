@@ -1,0 +1,4 @@
+.messages:nth-child(n){
+background-color: blue;
+transition: all 1s;
+}
